@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 namespace CodeWars.Tasks
 {
+    /// <summary>
+    /// https://www.codewars.com/kata/62a4abf03236976b7acf7781
+    /// </summary>
     public class ReturnMaximumHourMinute
     {
         static Dictionary<int, int> getFrequencyMap(int[] inputArray)
