@@ -6,7 +6,7 @@ namespace CodeWars.Tasks
     /// https://www.codewars.com/kata/62a4abf03236976b7acf7781
     /// </summary>
     /// Add string
-    public class ReturnMaximumHourMinute
+    public partial class Tasks
     {
         static Dictionary<int, int> getFrequencyMap(int[] inputArray)
         {

@@ -4,7 +4,7 @@ namespace CodeWars.Tasks
     /// <summary>
     /// https://www.codewars.com/kata/56b97b776ffcea598a0006f2/train/csharp
     /// </summary>
-    public static class BubbleSortOnce
+    public static partial class Tasks
     {
         public static int[] BubbleSortOnceResolve(int[] input)
         {
