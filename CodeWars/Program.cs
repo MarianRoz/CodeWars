@@ -3,9 +3,9 @@ using CodeWars.Tasks;
 
 namespace CodeWars.Tasks
 {
-    partial class Tasks
+    public partial class Tasks
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
 
             foreach (var item in Tasks.BubbleSortOnceResolve(new int[] { 10, 7, 5, 3, 1, 2, 4, 6, 8, 9 }))
