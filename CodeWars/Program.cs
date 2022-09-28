@@ -25,7 +25,8 @@ namespace CodeWars.Tasks
 
             int start = 1; int finish = 6;
             Cats(start, finish);
-            
+
+            CatsTwoTask(start, finish);
 
         }
     }
