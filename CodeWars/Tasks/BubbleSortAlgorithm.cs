@@ -6,7 +6,7 @@ namespace CodeWars.Tasks
     /// </summary>
     public static partial class Tasks
     {
-        public static int[] BubbleSortOnceResolve(int[] input)
+        public static int[] BubbleSortAlgorithm(int[] input)
         {
 
             int[] newArray = new int[input.Length];

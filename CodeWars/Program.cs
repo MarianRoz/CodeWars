@@ -8,7 +8,7 @@ namespace CodeWars.Tasks
         public static void Main(string[] args)
         {
 
-            foreach (var item in Tasks.BubbleSortOnceResolve(new int[] { 10, 7, 5, 3, 1, 2, 4, 6, 8, 9 }))
+            foreach (var item in Tasks.BubbleSortAlgorithm(new int[] { 10, 7, 5, 3, 1, 2, 4, 6, 8, 9 }))
             {
                 Console.Write($"{item} ");
             }
