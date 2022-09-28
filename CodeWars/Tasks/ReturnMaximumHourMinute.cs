@@ -8,7 +8,7 @@ namespace CodeWars.Tasks
     /// Add string
     public partial class Tasks
     {
-        static Dictionary<int, int> getFrequencyMap(int[] inputArray)
+        public static Dictionary<int, int> getFrequencyMap(int[] inputArray)
         {
             Dictionary<int, int> hashMap = new Dictionary<int, int>();
             for (int i = 0; i < inputArray.Length; i++)
@@ -25,7 +25,7 @@ namespace CodeWars.Tasks
             return hashMap;
         }
 
-        static bool hasDigit(Dictionary<int, int> hashMap, int digit)
+        public static bool hasDigit(Dictionary<int, int> hashMap, int digit)
         {
             if (hashMap.ContainsKey(digit) && hashMap[digit] > 0)
             {
