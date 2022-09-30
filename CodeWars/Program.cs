@@ -28,6 +28,8 @@ namespace CodeWars.Tasks
 
             CatsTwoTask(start, finish);
 
+            Console.WriteLine(IsValidWalk(new string[] { "s", "n", "s", "n", "s", "n", "s", "n", "w", "e" }));
+
         }
     }
 }
