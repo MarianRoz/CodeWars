@@ -10,26 +10,26 @@ namespace CodeWars.Tasks
     {
         public static Dictionary<int, int> getFrequencyMap(int[] inputArray)
         {
-            Dictionary<int, int> NumberOfElements = new Dictionary<int, int>();
+            Dictionary<int, int> numberOfElements = new Dictionary<int, int>();
             for (int i = 0; i < inputArray.Length; i++)
             {
-                if (NumberOfElements.ContainsKey(inputArray[i]))
+                if (numberOfElements.ContainsKey(inputArray[i]))
                 {
-                    NumberOfElements[inputArray[i]] = NumberOfElements[inputArray[i]] + 1;
+                    numberOfElements[inputArray[i]] = numberOfElements[inputArray[i]] + 1;
                 }
                 else
                 {
-                    NumberOfElements.Add(inputArray[i], 1);
+                    numberOfElements.Add(inputArray[i], 1);
                 }
             }
-            return NumberOfElements;
+            return numberOfElements;
         }
 
-        public static bool hasDigit(Dictionary<int, int> NumberOfElements, int digit)
+        public static bool hasDigit(Dictionary<int, int> numberOfElements, int digit)
         {
-            if (NumberOfElements.ContainsKey(digit) && NumberOfElements[digit] > 0)
+            if (numberOfElements.ContainsKey(digit) && numberOfElements[digit] > 0)
             {
-                NumberOfElements[digit] = NumberOfElements[digit] - 1;
+                numberOfElements[digit] = numberOfElements[digit] - 1;
                 return true;
             }
             return false;
@@ -38,7 +38,7 @@ namespace CodeWars.Tasks
 
         public static string MaxResolve(int[] inputArray)
         {
-            Dictionary<int, int> NumberOfElements = getFrequencyMap(inputArray);
+            Dictionary<int, int> numberOfElements = getFrequencyMap(inputArray);
             int i;
             bool flag;
             string time = "";
@@ -46,7 +46,7 @@ namespace CodeWars.Tasks
 
             for (i = 2; i >= 0; i--)
             {
-                if (hasDigit(NumberOfElements, i))
+                if (hasDigit(numberOfElements, i))
                 {
                     flag = true;
                     time += i;
@@ -65,7 +65,7 @@ namespace CodeWars.Tasks
             {
                 for (i = 3; i >= 0; i--)
                 {
-                    if (hasDigit(NumberOfElements, i))
+                    if (hasDigit(numberOfElements, i))
                     {
                         flag = true;
                         time += i;
@@ -78,7 +78,7 @@ namespace CodeWars.Tasks
             {
                 for (i = 9; i >= 0; i--)
                 {
-                    if (hasDigit(NumberOfElements, i))
+                    if (hasDigit(numberOfElements, i))
                     {
                         flag = true;
                         time += i;
@@ -93,11 +93,11 @@ namespace CodeWars.Tasks
             time += ":";
             flag = false;
 
-            NumberOfElements = getFrequencyMap(inputArray);
+            numberOfElements = getFrequencyMap(inputArray);
 
             for (i = 5; i >= 0; i--)
             {
-                if (hasDigit(NumberOfElements, i))
+                if (hasDigit(numberOfElements, i))
                 {
                     flag = true;
                     time += i;
@@ -111,7 +111,7 @@ namespace CodeWars.Tasks
             flag = false;
             for (i = 9; i >= 0; i--)
             {
-                if (hasDigit(NumberOfElements, i))
+                if (hasDigit(numberOfElements, i))
                 {
                     flag = true;
                     time += i;
