@@ -6,13 +6,13 @@ namespace CodeWars.Tasks
     /// </summary>
     public partial class Tasks
     {
-        public static int CatsTwoTask(int start, int finish)
+        public static int WhiteCats(int start, int finish)
         {
-            int Result;
-            int Division = (finish - start) / 3;
-            int RemainderFromDivision = (finish - start) % 3;
+            int result;
+            int division = (finish - start) / 3;
+            int remainderFromDivision = (finish - start) % 3;
 
-            return Result = (RemainderFromDivision == 0) ? Division : ((RemainderFromDivision == 1) ? Division += 1 : Division += 2);
+            return result = (remainderFromDivision == 0) ? division : ((remainderFromDivision == 1) ? division += 1 : division += 2);
         }
     }
 }
