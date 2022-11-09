@@ -11,7 +11,6 @@ namespace CodeWars.Tasks
             {
                 if (input[i] == '(') indent++;
                 if (input[i] == ')') indent--;
-                //if (indent < 0) return false;
             }
 
             return indent == 0;
