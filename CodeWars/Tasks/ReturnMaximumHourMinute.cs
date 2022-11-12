@@ -6,30 +6,30 @@ namespace CodeWars.Tasks
     /// https://www.codewars.com/kata/62a4abf03236976b7acf7781
     /// </summary>
     /// Add string
-    public class ReturnMaximumHourMinute
+    public partial class Tasks
     {
-        static Dictionary<int, int> getFrequencyMap(int[] inputArray)
+        public static Dictionary<int, int> getFrequencyMap(int[] inputArray)
         {
-            Dictionary<int, int> hashMap = new Dictionary<int, int>();
+            Dictionary<int, int> numberOfElements = new Dictionary<int, int>();
             for (int i = 0; i < inputArray.Length; i++)
             {
-                if (hashMap.ContainsKey(inputArray[i]))
+                if (numberOfElements.ContainsKey(inputArray[i]))
                 {
-                    hashMap[inputArray[i]] = hashMap[inputArray[i]] + 1;
+                    numberOfElements[inputArray[i]] = numberOfElements[inputArray[i]] + 1;
                 }
                 else
                 {
-                    hashMap.Add(inputArray[i], 1);
+                    numberOfElements.Add(inputArray[i], 1);
                 }
             }
-            return hashMap;
+            return numberOfElements;
         }
 
-        static bool hasDigit(Dictionary<int, int> hashMap, int digit)
+        public static bool hasDigit(Dictionary<int, int> numberOfElements, int digit)
         {
-            if (hashMap.ContainsKey(digit) && hashMap[digit] > 0)
+            if (numberOfElements.ContainsKey(digit) && numberOfElements[digit] > 0)
             {
-                hashMap[digit] = hashMap[digit] - 1;
+                numberOfElements[digit] = numberOfElements[digit] - 1;
                 return true;
             }
             return false;
@@ -38,7 +38,7 @@ namespace CodeWars.Tasks
 
         public static string MaxResolve(int[] inputArray)
         {
-            Dictionary<int, int> hashMap = getFrequencyMap(inputArray);
+            Dictionary<int, int> numberOfElements = getFrequencyMap(inputArray);
             int i;
             bool flag;
             string time = "";
@@ -46,7 +46,7 @@ namespace CodeWars.Tasks
 
             for (i = 2; i >= 0; i--)
             {
-                if (hasDigit(hashMap, i))
+                if (hasDigit(numberOfElements, i))
                 {
                     flag = true;
                     time += i;
@@ -65,7 +65,7 @@ namespace CodeWars.Tasks
             {
                 for (i = 3; i >= 0; i--)
                 {
-                    if (hasDigit(hashMap, i))
+                    if (hasDigit(numberOfElements, i))
                     {
                         flag = true;
                         time += i;
@@ -78,7 +78,7 @@ namespace CodeWars.Tasks
             {
                 for (i = 9; i >= 0; i--)
                 {
-                    if (hasDigit(hashMap, i))
+                    if (hasDigit(numberOfElements, i))
                     {
                         flag = true;
                         time += i;
@@ -93,11 +93,11 @@ namespace CodeWars.Tasks
             time += ":";
             flag = false;
 
-            hashMap = getFrequencyMap(inputArray);
+            numberOfElements = getFrequencyMap(inputArray);
 
             for (i = 5; i >= 0; i--)
             {
-                if (hasDigit(hashMap, i))
+                if (hasDigit(numberOfElements, i))
                 {
                     flag = true;
                     time += i;
@@ -111,7 +111,7 @@ namespace CodeWars.Tasks
             flag = false;
             for (i = 9; i >= 0; i--)
             {
-                if (hasDigit(hashMap, i))
+                if (hasDigit(numberOfElements, i))
                 {
                     flag = true;
                     time += i;

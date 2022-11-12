@@ -1,19 +1,35 @@
 ﻿using System;
 using CodeWars.Tasks;
 
-namespace BubblesortOnce
+namespace CodeWars.Tasks
 {
-    class Program
+    public partial class Tasks
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            foreach (var item in BubbleSortOnce.BubbleSortOnceResolve(new int[] { 10, 7, 5, 3, 1, 2, 4, 6, 8, 9 }))
+
+            foreach (var item in Tasks.BubbleSortAlgorithm(new int[] { 10, 7, 5, 3, 1, 2, 4, 6, 8, 9 }))
             {
                 Console.Write($"{item} ");
             }
             Console.ReadLine();
 
+
+            Console.WriteLine(Tasks.MaxResolve(new int[] { 1, 5, 3, 9, 7 }));
+            Console.ReadLine();
+
+
+            int a = 2, r = 4, n = 5;
+            Console.WriteLine($"Result: {GeometricSequenceElements(a, r, n)}");
+
+
+            int start = 1; int finish = 6;
+            Cats(start, finish);
+
+            CatsTwoTask(start, finish);
+
+            Console.WriteLine(IsValidWalk(new string[] { "s", "n", "s", "n", "s", "n", "s", "n", "w", "e" }));
+
         }
     }
 }
-//CodeWars
